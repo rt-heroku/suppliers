@@ -4,17 +4,17 @@
 	<div layout:fragment="body" class="d-flex flex-column flex-root app-root" id="kt_app_root">
 		<!--begin::Page-->
 		<div class="app-page  flex-column flex-column-fluid " id="kt_app_page">
-			<div th:replace="layout/partials/_header.html"></div>
+			<div th:replace="~{layout/partials/_header.html}"></div>
 			<!--begin::Wrapper-->
 			<div class="app-wrapper  flex-column flex-row-fluid " id="kt_app_wrapper">
-				<div th:replace="layout/partials/_sidebar.html"></div>
+				<div th:replace="~{layout/partials/_sidebar.html}"></div>
 				<!--begin::Main-->
 				<div class="app-main flex-column flex-row-fluid " id="kt_app_main">
 					<!--begin::Content wrapper-->
 					<div class="d-flex flex-column flex-column-fluid">
 
 						<!-- hacer que cargue de forma dinamica la pagina en el contenido -->
-						<!-- <div th:replace="layout/partials/_content.html"></div> -->
+						<!-- <div th:replace="layout/partials/_content.html}"></div> -->
 
 	                    <div id="kt_app_content" class="app-content flex-column-fluid">
 	                        <!--begin::Content container-->
@@ -25,10 +25,10 @@
 
 					</div>
 					<!--end::Content wrapper-->
-					<div th:replace="layout/partials/_footer.html"></div>
+					<div th:replace="~{layout/partials/_footer.html}"></div>
 				</div>
 				<!--end:::Main-->
-<!--				<div th:replace="layout/partials/_aside.html"></div>
+<!--				<div th:replace="layout/partials/_aside.html}"></div>
 -->
 			</div>
 			<!--end::Wrapper-->
@@ -37,13 +37,13 @@
 	</div>
 	<!--end::App-->
 	<div layout:fragment="offcanvas">
-		<div th:replace="partials/_drawers.html"></div>
-		<div th:replace="partials/_scrolltop.html"></div>
+		<div th:replace="~{partials/_drawers.html}"></div>
+		<div th:replace="~{partials/_scrolltop.html}"></div>
 		<!--begin::Modals-->
-		<div th:replace="partials/modals/_upgrade-plan.html"></div>
-		<div th:replace="partials/modals/_view-users.html"></div>
-		<div th:replace="partials/modals/users-search/_main.html"></div>
-		<div th:replace="partials/modals/_invite-friends.html"></div>
+		<div th:replace="~{partials/modals/_upgrade-plan.html}"></div>
+		<div th:replace="~{partials/modals/_view-users.html}"></div>
+		<div th:replace="~{partials/modals/users-search/_main.html}"></div>
+		<div th:replace="~{partials/modals/_invite-friends.html}"></div>
 		<!--end::Modals-->
 	</div>
 </body>

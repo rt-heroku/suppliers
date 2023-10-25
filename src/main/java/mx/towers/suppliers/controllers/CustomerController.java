@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import mx.towers.suppliers.services.AccountService;
@@ -54,4 +55,20 @@ public class CustomerController {
         return theme.getPageView("customers", "list");
     }
 
+    @GetMapping("/view/{id}")
+    public String viewCustomers(@PathVariable Integer id, Model model) {
+        model.addAttribute("accounts", accountService.getAccountById(id));
+        model.addAttribute("theme", theme);
+        model.addAttribute("settings", settings);
+        return theme.getPageView("customers", "view");
+    }
+    
+    @GetMapping("/getting-started")
+    public String gettingStarted(Model model) {
+        model.addAttribute("theme", theme);
+        model.addAttribute("settings", settings);
+        return theme.getPageView("customers", "getting-started");
+    }
+    
+    
 }
