@@ -3,12 +3,18 @@ package mx.towers.suppliers.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.ProviderManager;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.DefaultSecurityFilterChain;
-import org.springframework.security.web.server.SecurityWebFilterChain;
 
 @Configuration
 @EnableWebSecurity
@@ -65,22 +71,53 @@ public class SecurityConfig
 	  
 	@Bean
 	public DefaultSecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+
 		http
-			// ...
-			.csrf(csrf -> csrf.disable());
+			.csrf(csrf -> csrf.disable())
+			.authorizeHttpRequests((authorize) -> authorize
+//					.requestMatchers("/sign-in").permitAll()
+					.anyRequest().authenticated()
+				)
+				.httpBasic(Customizer.withDefaults())
+				.formLogin(Customizer.withDefaults())
+//			.formLogin(formlogin -> formlogin.loginPage("/sign-in"))
+//				.logout(l -> l.logoutRequestMatcher(new AntPathRequestMatcher("/sign-out.html"))
+//						.logoutSuccessUrl("/sign-in.html"))
+		;
 		return http.build();
+	}	
+	@Bean
+	public AuthenticationManager authenticationManager(
+			UserDetailsService userDetailsService,
+			PasswordEncoder passwordEncoder) {
+		DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
+		authenticationProvider.setUserDetailsService(userDetailsService);
+		authenticationProvider.setPasswordEncoder(passwordEncoder);
+
+		return new ProviderManager(authenticationProvider);
 	}
+
+	@Autowired PasswordEncoder encoder;
 	
-	
-    @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth, PasswordEncoder passwordEncoder) throws Exception {
-        auth.inMemoryAuthentication()
-            .withUser("user")
-            .password(passwordEncoder.encode("password"))
-            .roles("USER")
-            .and()
-            .withUser("admin")
-            .password(passwordEncoder.encode("admin"))
-            .roles("ADMIN");
-    }
+	@Bean
+	public UserDetailsService userDetailsService() {
+		UserDetails userDetails =User.withUsername("user")
+			.password(encoder.encode("password"))
+			.roles("USER")
+			.build();
+
+		return new InMemoryUserDetailsManager(userDetails);
+	}
+
+//    @Autowired
+//    public void configureGlobal(AuthenticationManagerBuilder auth, PasswordEncoder passwordEncoder) throws Exception {
+//        auth.inMemoryAuthentication()
+//            .withUser("user")
+//            .password(passwordEncoder.encode("password"))
+//            .roles("USER")
+//            .and()
+//            .withUser("admin")
+//            .password(passwordEncoder.encode("admin"))
+//            .roles("ADMIN");
+//    }
 }

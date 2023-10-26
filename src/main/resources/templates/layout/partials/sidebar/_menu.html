@@ -7,18 +7,62 @@
 			<span class="menu-icon">
 				<i class="ki-outline ki-gift fs-2"></i>
 			</span>
-			<span class="menu-title">Pages</span>
+			<span class="menu-title">Modulos</span>
 			<span class="menu-arrow"></span>
 		</span>
 		<!--end:Menu link-->
 		<div class="menu-sub menu-sub-accordion">
 			<div data-kt-menu-trigger="click" class="menu-item menu-accordion ">
 				<!--begin:Menu link-->
+				<div class="menu-item">
+					<!--begin:Menu link-->
+					<a class="menu-link" href="/suppliers/list">
+						<span class="menu-bullet">
+							<span class="bullet bullet-dot"></span>
+						</span>
+						<span class="menu-title">Proveedores</span>
+					</a>
+					<!--end:Menu link-->
+				</div>
+				<!--end:Menu item-->
+			</div>
+			<div data-kt-menu-trigger="click" class="menu-item menu-accordion ">
+				<!--begin:Menu item-->
+				<div class="menu-item">
+					<!--begin:Menu link-->
+					<a class="menu-link" href="/customers/list">
+						<span class="menu-bullet">
+							<span class="bullet bullet-dot"></span>
+						</span>
+						<span class="menu-title">Clientes</span>
+					</a>
+					<!--end:Menu link-->
+				</div>
+				<!--end:Menu item-->
+			</div>
+
+			<div data-kt-menu-trigger="click" class="menu-item menu-accordion ">
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="/?page=contracts/files">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Contratos</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+			</div>
+
+			<div data-kt-menu-trigger="click" class="menu-item menu-accordion ">
+				<!--begin:Menu link-->
 				<span class="menu-link">
 					<span class="menu-bullet">
 						<span class="bullet bullet-dot"></span>
 					</span>
-					<span class="menu-title">Suppliers</span>
+					<span class="menu-title">Cuentas Bancarias</span>
 					<span class="menu-arrow"></span>
 				</span>
 				<!--end:Menu link-->
@@ -27,11 +71,11 @@
 					<!--begin:Menu item-->
 					<div class="menu-item">
 						<!--begin:Menu link-->
-						<a class="menu-link" href="/suppliers/getting-started">
+						<a class="menu-link" href="/bank-info">
 							<span class="menu-bullet">
 								<span class="bullet bullet-dot"></span>
 							</span>
-							<span class="menu-title">Getting Started</span>
+							<span class="menu-title">Listado de Cuentas</span>
 						</a>
 						<!--end:Menu link-->
 					</div>
@@ -39,11 +83,11 @@
 					<!--begin:Menu item-->
 					<div class="menu-item">
 						<!--begin:Menu link-->
-						<a class="menu-link" href="/suppliers/list">
+						<a class="menu-link" href="/bank-info/add">
 							<span class="menu-bullet">
 								<span class="bullet bullet-dot"></span>
 							</span>
-							<span class="menu-title">Listing</span>
+							<span class="menu-title">Agregar Cuenta</span>
 						</a>
 						<!--end:Menu link-->
 					</div>
@@ -51,11 +95,11 @@
 					<!--begin:Menu item-->
 					<div class="menu-item">
 						<!--begin:Menu link-->
-						<a class="menu-link" href="/suppliers/view/1">
+						<a class="menu-link" href="/bank-info/movements">
 							<span class="menu-bullet">
 								<span class="bullet bullet-dot"></span>
 							</span>
-							<span class="menu-title">Details</span>
+							<span class="menu-title">Buscar Movimientos</span>
 						</a>
 						<!--end:Menu link-->
 					</div>
@@ -63,13 +107,15 @@
 				</div>
 				<!--end:Menu sub-->
 			</div>
+
+
 			<div data-kt-menu-trigger="click" class="menu-item menu-accordion ">
 				<!--begin:Menu link-->
 				<span class="menu-link">
 					<span class="menu-bullet">
 						<span class="bullet bullet-dot"></span>
 					</span>
-					<span class="menu-title">Customers</span>
+					<span class="menu-title">Ordenes</span>
 					<span class="menu-arrow"></span>
 				</span>
 				<!--end:Menu link-->
@@ -78,11 +124,11 @@
 					<!--begin:Menu item-->
 					<div class="menu-item">
 						<!--begin:Menu link-->
-						<a class="menu-link" href="/customers/getting-started">
+						<a class="menu-link" href="/?page=orders/listing">
 							<span class="menu-bullet">
 								<span class="bullet bullet-dot"></span>
 							</span>
-							<span class="menu-title">Getting Started</span>
+							<span class="menu-title">Ordenes</span>
 						</a>
 						<!--end:Menu link-->
 					</div>
@@ -90,11 +136,11 @@
 					<!--begin:Menu item-->
 					<div class="menu-item">
 						<!--begin:Menu link-->
-						<a class="menu-link" href="/customers/list">
+						<a class="menu-link" href="/?page=/orders/details">
 							<span class="menu-bullet">
 								<span class="bullet bullet-dot"></span>
 							</span>
-							<span class="menu-title">Listing</span>
+							<span class="menu-title">Detalles</span>
 						</a>
 						<!--end:Menu link-->
 					</div>
@@ -102,11 +148,23 @@
 					<!--begin:Menu item-->
 					<div class="menu-item">
 						<!--begin:Menu link-->
-						<a class="menu-link" href="/customers/view/1">
+						<a class="menu-link" href="/?page=orders/add-order">
 							<span class="menu-bullet">
 								<span class="bullet bullet-dot"></span>
 							</span>
-							<span class="menu-title">Details</span>
+							<span class="menu-title">Agregar Orden</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="/?page=orders/edit-order">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Editar Orden</span>
 						</a>
 						<!--end:Menu link-->
 					</div>
@@ -114,13 +172,16 @@
 				</div>
 				<!--end:Menu sub-->
 			</div>
+
+
+
 			<div data-kt-menu-trigger="click" class="menu-item menu-accordion ">
 				<!--begin:Menu link-->
 				<span class="menu-link">
 					<span class="menu-bullet">
 						<span class="bullet bullet-dot"></span>
 					</span>
-					<span class="menu-title">Invoice Manager</span>
+					<span class="menu-title">Facturas</span>
 					<span class="menu-arrow"></span>
 				</span>
 				<!--end:Menu link-->
@@ -143,7 +204,7 @@
 							<!--begin:Menu item-->
 							<div class="menu-item">
 								<!--begin:Menu link-->
-								<a class="menu-link" href="invoices/view/invoice-1.html}">
+								<a class="menu-link" href="/?page=invoices/view/invoice-1.html}">
 									<span class="menu-bullet">
 										<span class="bullet bullet-dot"></span>
 									</span>
@@ -155,7 +216,7 @@
 							<!--begin:Menu item-->
 							<div class="menu-item">
 								<!--begin:Menu link-->
-								<a class="menu-link" href="invoices/view/invoice-2.html}">
+								<a class="menu-link" href="/?page=invoices/view/invoice-2.html}">
 									<span class="menu-bullet">
 										<span class="bullet bullet-dot"></span>
 									</span>
@@ -167,7 +228,7 @@
 							<!--begin:Menu item-->
 							<div class="menu-item">
 								<!--begin:Menu link-->
-								<a class="menu-link" href="invoices/view/invoice-3.html}">
+								<a class="menu-link" href="/?page=invoices/view/invoice-3.html}">
 									<span class="menu-bullet">
 										<span class="bullet bullet-dot"></span>
 									</span>
@@ -183,7 +244,7 @@
 					<!--begin:Menu item-->
 					<div class="menu-item">
 						<!--begin:Menu link-->
-						<a class="menu-link" href="invoices/create.html}">
+						<a class="menu-link" href="/?page=invoices/create.html}">
 							<span class="menu-bullet">
 								<span class="bullet bullet-dot"></span>
 							</span>
