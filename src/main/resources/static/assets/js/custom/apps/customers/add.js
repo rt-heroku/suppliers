@@ -97,6 +97,23 @@ var KTModalCustomersAdd = function () {
             validator.revalidateField('country');
         });
 
+		async function postFormFieldsAsJson({ url, formData }) {
+
+			let res = await fetch(url, {
+				method: 'POST',
+				body: formData
+			});
+
+			//If the response is not ok throw an error (for debugging)
+			if (!res.ok) {
+				let error = await res.text();
+				throw new Error(error);
+			}
+			//If the response was OK, return the response body.
+			//  return res.json();
+			return res;
+		}
+
 		// Action buttons
 		submitButton.addEventListener('click', function (e) {
 			e.preventDefault();
@@ -112,30 +129,59 @@ var KTModalCustomersAdd = function () {
 						// Disable submit button whilst loading
 						submitButton.disabled = true;
 
-						setTimeout(function() {
-							submitButton.removeAttribute('data-kt-indicator');
-							
+//						console.log('Submitting form');
+//						console.dir(form);
+						let formData = new FormData(form);
+						let url = '/customers/save';
+//						console.log(search.toString());
+
+						let responseData = postFormFieldsAsJson({ url , formData });
+						responseData.then(function(res){
+/*							console.log("EVERYTHING OK");
+							console.dir(res);
+							console.log(res.ok);
+*/							if (res.ok){
+								submitButton.removeAttribute('data-kt-indicator');
+								
+								Swal.fire({
+									text: "Form has been successfully submitted!",
+									icon: "success",
+									buttonsStyling: false,
+									confirmButtonText: "Ok, got it!",
+									customClass: {
+										confirmButton: "btn btn-primary"
+									}
+								}).then(function (result) {
+									if (result.isConfirmed) {
+										// Hide modal
+										modal.hide();
+	
+										// Enable submit button after loading
+										submitButton.disabled = false;
+	
+										// Redirect to customers list page
+										window.location = form.getAttribute("data-kt-redirect");
+									}
+								});							
+							}
+
+						}).catch(function(e){
+//							console.log("ERROR");
+//							console.dir(e);
 							Swal.fire({
-								text: "Form has been successfully submitted!",
-								icon: "success",
+								text: "Sorry, looks like there are some errors detected, please try again.",
+								icon: "error",
 								buttonsStyling: false,
 								confirmButtonText: "Ok, got it!",
 								customClass: {
 									confirmButton: "btn btn-primary"
 								}
-							}).then(function (result) {
-								if (result.isConfirmed) {
-									// Hide modal
-									modal.hide();
-
-									// Enable submit button after loading
-									submitButton.disabled = false;
-
-									// Redirect to customers list page
-									window.location = form.getAttribute("data-kt-redirect");
-								}
-							});							
-						}, 2000);   						
+							}).then(function(result){
+								submitButton.setAttribute('data-kt-indicator', 'off');
+								submitButton.disabled = false;
+							});
+						});
+						
 					} else {
 						Swal.fire({
 							text: "Sorry, looks like there are some errors detected, please try again.",

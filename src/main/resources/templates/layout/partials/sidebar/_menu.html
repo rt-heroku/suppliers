@@ -1,7 +1,7 @@
 <!--begin::Sidebar menu-->
-<div id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="true"
+<div id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false"
 	class="app-sidebar-menu-primary menu menu-column menu-rounded menu-sub-indention menu-state-bullet-primary px-3 mb-5">
-	<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+	<div data-kt-menu-trigger="click" class="menu-item here show ">
 		<!--begin:Menu link-->
 		<span class="menu-link">
 			<span class="menu-icon">
@@ -11,7 +11,58 @@
 			<span class="menu-arrow"></span>
 		</span>
 		<!--end:Menu link-->
-		<div class="menu-sub menu-sub-accordion" kt-hidden-height="506" style="display: none; overflow: hidden;">
+		<div class="menu-sub menu-sub-accordion">
+			<div data-kt-menu-trigger="click" class="menu-item menu-accordion ">
+				<!--begin:Menu link-->
+				<span class="menu-link">
+					<span class="menu-bullet">
+						<span class="bullet bullet-dot"></span>
+					</span>
+					<span class="menu-title">Suppliers</span>
+					<span class="menu-arrow"></span>
+				</span>
+				<!--end:Menu link-->
+				<!--begin:Menu sub-->
+				<div class="menu-sub menu-sub-accordion" >
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="/suppliers/getting-started">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Getting Started</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="/suppliers/list">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Listing</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="/suppliers/view/1">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Details</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+				</div>
+				<!--end:Menu sub-->
+			</div>
 			<div data-kt-menu-trigger="click" class="menu-item menu-accordion ">
 				<!--begin:Menu link-->
 				<span class="menu-link">
@@ -23,8 +74,7 @@
 				</span>
 				<!--end:Menu link-->
 				<!--begin:Menu sub-->
-				<div class="menu-sub menu-sub-accordion" kt-hidden-height="127"
-					style="display: none; overflow: hidden;">
+				<div class="menu-sub menu-sub-accordion" >
 					<!--begin:Menu item-->
 					<div class="menu-item">
 						<!--begin:Menu link-->
@@ -44,7 +94,7 @@
 							<span class="menu-bullet">
 								<span class="bullet bullet-dot"></span>
 							</span>
-							<span class="menu-title">Customer Listing</span>
+							<span class="menu-title">Listing</span>
 						</a>
 						<!--end:Menu link-->
 					</div>
@@ -56,7 +106,7 @@
 							<span class="menu-bullet">
 								<span class="bullet bullet-dot"></span>
 							</span>
-							<span class="menu-title">Customer Details</span>
+							<span class="menu-title">Details</span>
 						</a>
 						<!--end:Menu link-->
 					</div>
@@ -93,7 +143,7 @@
 							<!--begin:Menu item-->
 							<div class="menu-item">
 								<!--begin:Menu link-->
-								<a class="menu-link" href="invoices/view/invoice-1.html">
+								<a class="menu-link" href="invoices/view/invoice-1.html}">
 									<span class="menu-bullet">
 										<span class="bullet bullet-dot"></span>
 									</span>
@@ -105,7 +155,7 @@
 							<!--begin:Menu item-->
 							<div class="menu-item">
 								<!--begin:Menu link-->
-								<a class="menu-link" href="invoices/view/invoice-2.html">
+								<a class="menu-link" href="invoices/view/invoice-2.html}">
 									<span class="menu-bullet">
 										<span class="bullet bullet-dot"></span>
 									</span>
@@ -117,7 +167,7 @@
 							<!--begin:Menu item-->
 							<div class="menu-item">
 								<!--begin:Menu link-->
-								<a class="menu-link" href="invoices/view/invoice-3.html">
+								<a class="menu-link" href="invoices/view/invoice-3.html}">
 									<span class="menu-bullet">
 										<span class="bullet bullet-dot"></span>
 									</span>
@@ -133,7 +183,7 @@
 					<!--begin:Menu item-->
 					<div class="menu-item">
 						<!--begin:Menu link-->
-						<a class="menu-link" href="invoices/create.html">
+						<a class="menu-link" href="invoices/create.html}">
 							<span class="menu-bullet">
 								<span class="bullet bullet-dot"></span>
 							</span>
@@ -147,6 +197,10 @@
 			</div>
 			<!--end:Menu item-->
 		</div>
+
+
+
+
 		<!--end::Sidebar menu-->
 	</div>
 </div>

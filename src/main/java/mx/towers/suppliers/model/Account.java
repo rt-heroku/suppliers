@@ -1,21 +1,20 @@
 package mx.towers.suppliers.model;
 
 import java.time.LocalDate;
-
-import org.hibernate.annotations.JdbcTypeCode;
-import org.hibernate.type.SqlTypes;
+import java.util.HashMap;
+import java.util.List;
 
 import jakarta.persistence.Access;
 import jakarta.persistence.AccessType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
-import jakarta.persistence.ForeignKey;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 
@@ -66,18 +65,54 @@ public class Account {
     @Column(name = "website")
     private String website;
 
+    @Column(name = "notes")
+    private String notes;
+    
     @Column(name = "account_type", nullable = false)
     private Integer accountType;
 
     @Column(name = "created_date", nullable = false)
     private LocalDate createdDate; // Using LocalDate to map with DATE in SQL
 
-    @JdbcTypeCode(SqlTypes.INTEGER)
-    @ManyToOne(targetEntity=Types.class, fetch=FetchType.LAZY)
-    @JoinColumn(name="status", nullable = false, foreignKey = @ForeignKey(name="account_status_fk"))
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="status", nullable = false)
     private Types status;
  
-    public Types getStatus() {
+    @OneToMany(mappedBy="account")
+    private List<Payment> payments;
+    
+    @OneToMany(mappedBy="account")
+    private List<BankInfo> bankinfo;
+
+    public Account(HashMap<String, String> data) {
+    	
+    	
+    	
+    	
+		// TODO Auto-generated constructor stub
+	}
+
+	public Account() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public List<Payment> getPayments() {
+		return payments;
+	}
+
+	public void setPayments(List<Payment> payments) {
+		this.payments = payments;
+	}
+
+	public List<BankInfo> getBankinfo() {
+		return bankinfo;
+	}
+
+	public void setBankinfo(List<BankInfo> bankinfo) {
+		this.bankinfo = bankinfo;
+	}
+
+	public Types getStatus() {
 		return status;
 	}
 
@@ -210,6 +245,14 @@ public class Account {
 
 	public void setCreatedDate(LocalDate createdDate) {
 		this.createdDate = createdDate;
+	}
+
+	public String getNotes() {
+		return notes;
+	}
+
+	public void setNotes(String notes) {
+		this.notes = notes;
 	}
 
     // Getters, setters, equals, hashCode, and toString methods...

@@ -23,6 +23,10 @@ public class AccountService {
         return accountRepository.findAll();
     }
 
+    public List<Account> getAccountsByAccountType(Integer id) {
+        return accountRepository.findByAccountType(id);
+    }
+
     public Optional<Account> getAccountById(Integer id) {
         return accountRepository.findById(id);
     }

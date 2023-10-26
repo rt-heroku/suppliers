@@ -21,9 +21,9 @@ import mx.towers.suppliers.theme.libs.KTTheme;
 import mx.towers.suppliers.theme.libs.config.KTThemeBaseConfig;
 
 @Controller
-@RequestMapping("/customers")
-public class CustomerController {
-    private static final Integer ACCOUNT_TYPE = 2;
+@RequestMapping("/suppliers")
+public class SuppliersController {
+    private static final Integer ACCOUNT_TYPE = 1;
 
 	private static final String CUSTOMERS = "customers";
 	private static final String SUPPLIERS = "suppliers";
@@ -40,7 +40,6 @@ public class CustomerController {
     @Autowired
 	private TypesRepository typesRepository;
 
-    
     private String getFolderName(int accountType, String resource) {
     	String path ="";
     	if (accountType == 1)

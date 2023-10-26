@@ -32,16 +32,16 @@
 </div>
 <!--end::App-->
 <div layout:fragment="offcanvas">
-    <div th:replace="partials/_drawers.html"></div>
+    <div th:replace="~{partials/_drawers.html}"></div>
 
-    <div th:replace="partials/_scrolltop.html"></div>
+    <div th:replace="~{partials/_scrolltop.html}"></div>
 
-    <div th:replace="partials/modals/_upgrade-plan.html"></div>
-    <div th:replace="partials/modals/create-app/_main.html"></div>
-    <div th:replace="partials/modals/_new-target.html"></div>
-    <div th:replace="partials/modals/_view-users.html"></div>
-    <div th:replace="partials/modals/users-search/_main.html"></div>
-    <div th:replace="partials/modals/_invite-friends.html"></div>
+    <div th:replace="~{partials/modals/_upgrade-plan.html}"></div>
+    <div th:replace="~{partials/modals/create-app/_main.html}"></div>
+    <div th:replace="~{partials/modals/_new-target.html}"></div>
+    <div th:replace="~{partials/modals/_view-users.html}"></div>
+    <div th:replace="~{partials/modals/users-search/_main.html}"></div>
+    <div th:replace="~{partials/modals/_invite-friends.html}"></div>
 </div>
 </body>
 </html>
