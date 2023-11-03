@@ -1,0 +1,93 @@
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout/default}">
+
+<head>
+	<title>Vendedores</title>
+</head>
+
+<body>
+	<div layout:fragment="content">
+		<div class="d-flex flex-wrap flex-stack mb-6">
+			<!--begin::Title-->
+			<h3 class="text-gray-800 fw-bold my-2">Vendedores
+				<span class="fs-6 text-gray-400 fw-semibold ms-1">(29)</span>
+			</h3>
+			<!--end::Title-->
+			<!--begin::Controls-->
+			<div class="d-flex my-2">
+				<!--begin::Select-->
+				<select name="status" data-control="select2" data-hide-search="true"
+					class="form-select form-select-sm form-select-solid w-125px">
+					<option value="Active" selected="selected">Active</option>
+					<option value="Approved">In Progress</option>
+					<option value="Declined">To Do</option>
+					<option value="In Progress">Completed</option>
+				</select>
+				<!--end::Select-->
+			</div>
+			<!--end::Controls-->
+		</div>
+		<!--end::Followers toolbar-->
+		<!--begin::Row-->
+		<div class="row g-6 mb-6 g-xl-9 mb-xl-9">
+			<!--begin::Followers-->
+			<!--begin::Col-->
+			<div th:each="user : ${users}" class="col-md-6 col-xxl-4">
+				<!--begin::Card-->
+				<div class="card">
+					<!--begin::Card body-->
+					<div class="card-body d-flex flex-center flex-column py-9 px-5">
+						<!--begin::Avatar-->
+						<div class="symbol symbol-65px symbol-circle mb-5">
+							<span class="symbol-label fs-2x fw-semibold text-success bg-light-success">P</span>
+						</div>
+						<!--end::Avatar-->
+						<!--begin::Name-->
+						<a href="#" class="fs-4 text-gray-800 text-hover-primary fw-bold mb-0">[[${user.firstName} + ' '
+							+ ${user.lastName}]]</a>
+						<!--end::Name-->
+						<!--begin::Position-->
+						<div class="fw-semibold text-gray-400 mb-6" th:text="${user.notes}"></div>
+						<!--end::Position-->
+						<!--begin::Info-->
+						<div class="d-flex flex-center flex-wrap mb-5">
+							<!--begin::Stats-->
+							<div class="border border-dashed rounded min-w-90px py-3 px-4 mx-2 mb-3">
+								<div class="fs-6 fw-bold text-gray-700">$14,560</div>
+								<div class="fw-semibold text-gray-400">Depositos</div>
+							</div>
+							<!--end::Stats-->
+							<!--begin::Stats-->
+							<div class="border border-dashed rounded min-w-90px py-3 px-4 mx-2 mb-3">
+								<div class="fs-6 fw-bold text-gray-700">$236,400</div>
+								<div class="fw-semibold text-gray-400">Ventas</div>
+							</div>
+							<!--end::Stats-->
+						</div>
+						<!--end::Info-->
+						<!--begin::Follow-->
+						<button class="btn btn-sm btn-light-primary btn-flex btn-center" data-kt-follow-btn="true">
+							<i class="ki-outline ki-plus follow fs-3 d-none"></i>
+							<!--begin::Indicator label-->
+							<span class="indicator-label">Ver Detalle</span>
+							<!--end::Indicator label-->
+							<!--begin::Indicator progress-->
+							<span class="indicator-progress">Please wait...
+								<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+							<!--end::Indicator progress-->
+						</button>
+						<!--end::Follow-->
+					</div>
+					<!--begin::Card body-->
+				</div>
+				<!--begin::Card-->
+			</div>
+			<!--end::Col-->
+			<!--end::Followers-->
+		</div>
+		<!--end::Row-->
+	</div>
+	<script src="/assets/js/custom/pages/user-profile/general.js"></script>
+</body>
+<!--end::Body-->
+
+</html>

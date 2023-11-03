@@ -83,6 +83,9 @@ public class KTBootstrap {
         theme.addHtmlAttribute("body", "data-kt-app-aside-fixed","false" );
         theme.addHtmlAttribute("body", "data-kt-app-aside-push-toolbar","false" );
         theme.addHtmlAttribute("body", "data-kt-app-aside-push-footer","false");
+
+        theme.addHtmlAttribute("body", "data-kt-app-toolbar-enabled","true");
+        
     	theme.addHtmlClass("body", "app-default");
 
         // Global vendors and javascript files

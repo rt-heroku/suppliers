@@ -38,7 +38,7 @@
 <!--begin::Body-->
 
 <body th:attr="__${@theme.printHtmlAttributes('body')}__" th:class="${@theme.printHtmlClasses('body')}">
-	<th:block th:replace="~{partials/theme-mode/_init.html}"></th:block>>
+	<th:block th:replace="~{partials/theme-mode/_init.html}"></th:block>
 
     <th:block layout:fragment="body"></th:block>
     <th:block layout:fragment="offcanvas"></th:block>
