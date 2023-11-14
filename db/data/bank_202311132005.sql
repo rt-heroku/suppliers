@@ -1,0 +1,118 @@
+INSERT INTO public.bank (banco,"name",initial_date,end_date) VALUES
+	 ('Otro','Otro','2017-01-01',NULL),
+	 ('BANAMEX','Banco Nacional de México, S.A., Institución de Banca Múltiple, Grupo Financiero Banamex','2017-01-01',NULL),
+	 ('BANCOMEXT','Banco Nacional de Comercio Exterior, Sociedad Nacional de Crédito, Institución de Banca de Desarrollo','2017-01-01',NULL),
+	 ('BANOBRAS','Banco Nacional de Obras y Servicios Públicos, Sociedad Nacional de Crédito, Institución de Banca de Desarrollo','2017-01-01',NULL),
+	 ('BBVA BANCOMER','BBVA Bancomer, S.A., Institución de Banca Múltiple, Grupo Financiero BBVA Bancomer','2017-01-01',NULL),
+	 ('SANTANDER','Banco Santander (México), S.A., Institución de Banca Múltiple, Grupo Financiero Santander','2017-01-01',NULL),
+	 ('BANJERCITO','Banco Nacional del Ejército, Fuerza Aérea y Armada, Sociedad Nacional de Crédito, Institución de Banca de Desarrollo','2017-01-01',NULL),
+	 ('HSBC','HSBC México, S.A., institución De Banca Múltiple, Grupo Financiero HSBC','2017-01-01',NULL),
+	 ('BAJIO','Banco del Bajío, S.A., Institución de Banca Múltiple','2017-01-01',NULL),
+	 ('IXE','IXE Banco, S.A., Institución de Banca Múltiple, IXE Grupo Financiero','2017-01-01','2017-08-13');
+INSERT INTO public.bank (banco,"name",initial_date,end_date) VALUES
+	 ('INBURSA','Banco Inbursa, S.A., Institución de Banca Múltiple, Grupo Financiero Inbursa','2017-01-01',NULL),
+	 ('INTERACCIONES','Banco Interacciones, S.A., Institución de Banca Múltiple','2017-01-01',NULL),
+	 ('MIFEL','Banca Mifel, S.A., Institución de Banca Múltiple, Grupo Financiero Mifel','2017-01-01',NULL),
+	 ('SCOTIABANK','Scotiabank Inverlat, S.A.','2017-01-01',NULL),
+	 ('BANREGIO','Banco Regional de Monterrey, S.A., Institución de Banca Múltiple, Banregio Grupo Financiero','2017-01-01',NULL),
+	 ('INVEX','Banco Invex, S.A., Institución de Banca Múltiple, Invex Grupo Financiero','2017-01-01',NULL),
+	 ('BANSI','Bansi, S.A., Institución de Banca Múltiple','2017-01-01',NULL),
+	 ('AFIRME','Banca Afirme, S.A., Institución de Banca Múltiple','2017-01-01',NULL),
+	 ('BANORTE/IXE','Banco Mercantil del Norte, S.A., Institución de Banca Múltiple, Grupo Financiero Banorte','2017-01-01',NULL),
+	 ('THE ROYAL BANK','The Royal Bank of Scotland México, S.A., Institución de Banca Múltiple','2017-01-01',NULL);
+INSERT INTO public.bank (banco,"name",initial_date,end_date) VALUES
+	 ('AMERICAN EXPRESS','American Express Bank (México), S.A., Institución de Banca Múltiple','2017-01-01',NULL),
+	 ('BAMSA','Bank of America México, S.A., Institución de Banca Múltiple, Grupo Financiero Bank of America','2017-01-01',NULL),
+	 ('TOKYO','Bank of Tokyo-Mitsubishi UFJ (México), S.A.','2017-01-01',NULL),
+	 ('JP MORGAN','Banco J.P. Morgan, S.A., Institución de Banca Múltiple, J.P. Morgan Grupo Financiero','2017-01-01',NULL),
+	 ('BMONEX','Banco Monex, S.A., Institución de Banca Múltiple','2017-01-01',NULL),
+	 ('VE POR MAS','Banco Ve Por Mas, S.A. Institución de Banca Múltiple','2017-01-01',NULL),
+	 ('ING','ING Bank (México), S.A., Institución de Banca Múltiple, ING Grupo Financiero','2017-01-01','2017-08-13'),
+	 ('DEUTSCHE','Deutsche Bank México, S.A., Institución de Banca Múltiple','2017-01-01',NULL),
+	 ('CREDIT SUISSE','Banco Credit Suisse (México), S.A. Institución de Banca Múltiple, Grupo Financiero Credit Suisse (México)','2017-01-01',NULL),
+	 ('AZTECA','Banco Azteca, S.A. Institución de Banca Múltiple.','2017-01-01',NULL);
+INSERT INTO public.bank (banco,"name",initial_date,end_date) VALUES
+	 ('AUTOFIN','Banco Autofin México, S.A. Institución de Banca Múltiple','2017-01-01',NULL),
+	 ('BARCLAYS','Barclays Bank México, S.A., Institución de Banca Múltiple, Grupo Financiero Barclays México','2017-01-01',NULL),
+	 ('COMPARTAMOS','Banco Compartamos, S.A., Institución de Banca Múltiple','2017-01-01',NULL),
+	 ('BANCO FAMSA','Banco Ahorro Famsa, S.A., Institución de Banca Múltiple','2017-01-01',NULL),
+	 ('BMULTIVA','Banco Multiva, S.A., Institución de Banca Múltiple, Multivalores Grupo Financiero','2017-01-01',NULL),
+	 ('ACTINVER','Banco Actinver, S.A. Institución de Banca Múltiple, Grupo Financiero Actinver','2017-01-01',NULL),
+	 ('WAL-MART','Banco Wal-Mart de México Adelante, S.A., Institución de Banca Múltiple','2017-01-01','2017-08-13'),
+	 ('NAFIN','Nacional Financiera, Sociedad Nacional de Crédito, Institución de Banca de Desarrollo','2017-01-01',NULL),
+	 ('INTERCAM BANCO','Intercam Banco, S.A., Institución de Banca Múltiple, Intercam Grupo Financiero','2017-01-01',NULL),
+	 ('BANCOPPEL','BanCoppel, S.A., Institución de Banca Múltiple','2017-01-01',NULL);
+INSERT INTO public.bank (banco,"name",initial_date,end_date) VALUES
+	 ('ABC CAPITAL','ABC Capital, S.A., Institución de Banca Múltiple','2017-01-01',NULL),
+	 ('UBS BANK','UBS Bank México, S.A., Institución de Banca Múltiple, UBS Grupo Financiero','2017-01-01',NULL),
+	 ('CONSUBANCO','Consubanco, S.A. Institución de Banca Múltiple','2017-01-01',NULL),
+	 ('VOLKSWAGEN','Volkswagen Bank, S.A., Institución de Banca Múltiple','2017-01-01',NULL),
+	 ('CIBANCO','CIBanco, S.A.','2017-01-01',NULL),
+	 ('BBASE','Banco Base, S.A., Institución de Banca Múltiple','2017-01-01',NULL),
+	 ('BANKAOOL','Bankaool, S.A., Institución de Banca Múltiple','2017-08-13',NULL),
+	 ('PAGATODO','Banco PagaTodo, S.A., Institución de Banca Múltiple','2017-08-13',NULL),
+	 ('FORJADORES','Banco Forjadores, S.A., Institución de Banca Múltiple','2017-08-13',NULL),
+	 ('INMOBILIARIO','Banco Inmobiliario Mexicano, S.A., Institución de Banca Múltiple','2017-08-13',NULL);
+INSERT INTO public.bank (banco,"name",initial_date,end_date) VALUES
+	 ('DONDÉ','Fundación Dondé Banco, S.A., Institución de Banca Múltiple','2017-08-13',NULL),
+	 ('BANCREA','Banco Bancrea, S.A., Institución de Banca Múltiple','2017-08-13',NULL),
+	 ('PROGRESO','Banco Progreso Chihuahua, S.A.','2017-08-13',NULL),
+	 ('BANCO FINTERRA','Banco Finterra, S.A., Institución de Banca Múltiple','2017-08-13',NULL),
+	 ('ICBC','Industrial and Commercial Bank of China México, S.A., Institución de Banca Múltiple','2017-08-13',NULL),
+	 ('SABADELL','Banco Sabadell, S.A., Institución de Banca Múltiple','2017-08-13',NULL),
+	 ('SHINHAN','Banco Shinhan de México, S.A., Institución de Banca Múltiple','2017-08-13',NULL),
+	 ('MIZUHO BANK','Mizuho Bank México, S.A., Institución de Banca Múltiple','2017-08-13',NULL),
+	 ('BANK OF CHINA','Bank of China México, S.A., Institución de Banca Múltiple','2017-08-13',NULL),
+	 ('BANCO S3','Banco S3 México, S.A., Institución de Banca Múltiple','2017-08-13',NULL);
+INSERT INTO public.bank (banco,"name",initial_date,end_date) VALUES
+	 ('BANSEFI','Banco del Ahorro Nacional y Servicios Financieros, Sociedad Nacional de Crédito, Institución de Banca de Desarrollo','2017-01-01',NULL),
+	 ('HIPOTECARIA FEDERAL','Sociedad Hipotecaria Federal, Sociedad Nacional de Crédito, Institución de Banca de Desarrollo','2017-01-01',NULL),
+	 ('MONEXCB','Monex Casa de Bolsa, S.A. de C.V. Monex Grupo Financiero','2017-01-01',NULL),
+	 ('GBM','GBM Grupo Bursátil Mexicano, S.A. de C.V. Casa de Bolsa','2017-01-01',NULL),
+	 ('MASARI','Masari Casa de Bolsa, S.A.','2017-01-01',NULL),
+	 ('VALUE','Value, S.A. de C.V. Casa de Bolsa','2017-01-01',NULL),
+	 ('ESTRUCTURADORES','Estructuradores del Mercado de Valores Casa de Bolsa, S.A. de C.V.','2017-01-01',NULL),
+	 ('TIBER','Casa de Cambio Tiber, S.A. de C.V.','2017-01-01',NULL),
+	 ('VECTOR','Vector Casa de Bolsa, S.A. de C.V.','2017-01-01',NULL),
+	 ('B&B','B y B, Casa de Cambio, S.A. de C.V.','2017-01-01',NULL);
+INSERT INTO public.bank (banco,"name",initial_date,end_date) VALUES
+	 ('ACCIVAL','Acciones y Valores Banamex, S.A. de C.V., Casa de Bolsa','2017-01-01',NULL),
+	 ('MERRILL LYNCH','Merrill Lynch México, S.A. de C.V. Casa de Bolsa','2017-01-01',NULL),
+	 ('FINAMEX','Casa de Bolsa Finamex, S.A. de C.V.','2017-01-01',NULL),
+	 ('VALMEX','Valores Mexicanos Casa de Bolsa, S.A. de C.V.','2017-01-01',NULL),
+	 ('UNICA','Unica Casa de Cambio, S.A. de C.V.','2017-01-01',NULL),
+	 ('MAPFRE','MAPFRE Tepeyac, S.A.','2017-01-01',NULL),
+	 ('PROFUTURO','Profuturo G.N.P., S.A. de C.V., Afore','2017-01-01',NULL),
+	 ('CB ACTINVER','Actinver Casa de Bolsa, S.A. de C.V.','2017-01-01',NULL),
+	 ('OACTIN','OPERADORA ACTINVER, S.A. DE C.V.','2017-01-01',NULL),
+	 ('SKANDIA VIDA','Skandia Vida, S.A. de C.V.','2017-01-01',NULL);
+INSERT INTO public.bank (banco,"name",initial_date,end_date) VALUES
+	 ('CBDEUTSCHE','Deutsche Securities, S.A. de C.V. CASA DE BOLSA','2017-01-01',NULL),
+	 ('ZURICH','Zurich Compañía de Seguros, S.A.','2017-01-01',NULL),
+	 ('ZURICHVI','Zurich Vida, Compañía de Seguros, S.A.','2017-01-01',NULL),
+	 ('SU CASITA','Hipotecaria Su Casita, S.A. de C.V. SOFOM ENR','2017-01-01',NULL),
+	 ('CB INTERCAM','Intercam Casa de Bolsa, S.A. de C.V.','2017-01-01',NULL),
+	 ('CI BOLSA','CI Casa de Bolsa, S.A. de C.V.','2017-01-01',NULL),
+	 ('BULLTICK CB','Bulltick Casa de Bolsa, S.A., de C.V.','2017-01-01',NULL),
+	 ('STERLING','Sterling Casa de Cambio, S.A. de C.V.','2017-01-01',NULL),
+	 ('FINCOMUN','Fincomún, Servicios Financieros Comunitarios, S.A. de C.V.','2017-01-01',NULL),
+	 ('HDI SEGUROS','HDI Seguros, S.A. de C.V.','2017-01-01',NULL);
+INSERT INTO public.bank (banco,"name",initial_date,end_date) VALUES
+	 ('ORDER','Order Express Casa de Cambio, S.A. de C.V','2017-01-01',NULL),
+	 ('AKALA','Akala, S.A. de C.V., Sociedad Financiera Popular','2017-01-01',NULL),
+	 ('CB JPMORGAN','J.P. Morgan Casa de Bolsa, S.A. de C.V. J.P. Morgan Grupo Financiero','2017-01-01',NULL),
+	 ('REFORMA','Operadora de Recursos Reforma, S.A. de C.V., S.F.P.','2017-01-01',NULL),
+	 ('STP','Sistema de Transferencias y Pagos STP, S.A. de C.V.SOFOM ENR','2017-01-01',NULL),
+	 ('TELECOMM','Telecomunicaciones de México','2017-01-01',NULL),
+	 ('EVERCORE','Evercore Casa de Bolsa, S.A. de C.V.','2017-01-01',NULL),
+	 ('SKANDIA','Skandia Operadora de Fondos, S.A. de C.V.','2017-01-01',NULL),
+	 ('SEGMTY','Seguros Monterrey New York Life, S.A de C.V','2017-01-01',NULL),
+	 ('ASEA','Solución Asea, S.A. de C.V., Sociedad Financiera Popular','2017-01-01',NULL);
+INSERT INTO public.bank (banco,"name",initial_date,end_date) VALUES
+	 ('KUSPIT','Kuspit Casa de Bolsa, S.A. de C.V.','2017-01-01',NULL),
+	 ('SOFIEXPRESS','J.P. SOFIEXPRESS, S.A. de C.V., S.F.P.','2017-01-01',NULL),
+	 ('UNAGRA','UNAGRA, S.A. de C.V., S.F.P.','2017-01-01',NULL),
+	 ('OPCIONES EMPRESARIALES DEL NOROESTE','OPCIONES EMPRESARIALES DEL NORESTE, S.A. DE C.V., S.F.P.','2017-01-01',NULL),
+	 ('LIBERTAD','Libertad Servicios Financieros, S.A. De C.V.','2017-01-01',NULL),
+	 ('CLS','Cls Bank International','2017-01-01',NULL),
+	 ('INDEVAL','SD. Indeval, S.A. de C.V.','2017-01-01',NULL);
